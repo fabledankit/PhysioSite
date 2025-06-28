@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #666666;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 74px;
+    line-height: 1;
+    letter-spacing: -1.6px;
+}
+
+h2 {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -1.6px;
+}
+
+
+h3 {
+    font-family: 'Montserrat' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -1.6px;
+}
+
+.blackText {
+    color: #1a1a1a;
+}
+
+.whiteText {
+    color: #fff;
+}
+
+.button {
+    border: none;
+    text-decoration: none;
+    padding: 8px 16px;
+    background: #6B4EFF;
+    border-radius: 12px;
+    color: #FFFFFF;
+
+    font-family: inherit;
+    /* font-family: "Open Sans" sans-serif;
+    font-style: normal;
+    font-weight: 400; */
+    font-size: 19px;
+    line-height: 1.5;
+
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #a98fff;
+}
+
+.Ghost {
+    background: transparent;
+    border: 1px solid #6B4EFF;
+    color: #1a1a1a;
+}
+
+.Ghost:hover {
+    background: transparent;
+    border-color: #a98fff;
+}
+
+.wrapper {
+    padding: 48px 0;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.heroWrapper {
+    padding-top: 360px;
+}
+
+.heroContent {
+    max-width: 843px;
+}
+
+.heroContent-copy {
+    margin-bottom: 48px;
+}
+
+.heroText {
+    margin-bottom: 16px;
+}
+
+.CTA-set {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.credentialCopy {
+    max-width: 400px;
+    margin-bottom: 64px;
+}
+
+.credentialCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    min-width: 177px;
+    height: 177px;
+    border-left: 1px solid #6B4EFF;
+    padding: 0 10px;
+
+    color: #1a1a1a;
+}
+
+
+
+/* This remains the constrained center layout */
+.credentialWrapper {
+    padding: 48px 0;
+    max-width: 1280px;
+    margin: auto;
+}
+
+/* New full-width wrapper */
+.credentialRailOuter {
+
+    /* Dont use viewport size! Change them after fixing containers ? But it's not causing any issue! */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* The visible window for the scrolling content */
+.credentialRail {
+    overflow: hidden;
+    position: relative;
+    height: 180px;
+    width: 100%;
+}
+
+/* The actual scrolling rail */
+.Rail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    animation: moveLeft 12s linear infinite;
+}
+
+/* Optional animation */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-844px);
+        /* Adjust based on actual overflow */
+    }
+}
+
+
+.darkSection {
+    background: #0B0D21;
+}
+
+.treatmentSection-title {
+    margin-bottom: 64px;
+    max-width: 839px;
+}
+
+.treatmentGrid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+}
+
+.treatmentCard {
+    border-top: 2px solid #6B4EFF;
+    padding: 10px 0;
+}
+
+.testimonialSection-title {
+    text-align: center;
+    margin-bottom: 48px;
+    margin-top: 72px;
+}
+
+.testimonialGrid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.testimonialCard {
+    background: #000;
+    padding: 32px;
+}
+
+.testimonialCard-testimonial {
+    margin-bottom: 16px;
+}
+
+.offeringSection-content {
+    max-width: 842px;
+    margin-left: auto;
+    margin-bottom: 96px;
+}
+
+.offeringSection-copy {
+    margin-bottom: 96px;
+}
+
+.featureSection-title {
+    max-width: 400px;
+    margin-bottom: 144px;
+}
+
+.featureFlex {
+    display: flex;
+    gap: 42px;
+    align-items: flex-start;
+
+    max-width: 951px;
+}
+
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid #6B4EFF;
+    padding: 0 10px;
+    height: 257px;
+    width: 289px;
+
+    color: #1a1a1a;
+}
+
+.featureCard-label {
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 5px 10px;
+    max-width: fit-content;
+
+    font-size: 12px;
+    line-height: 1;
+}
+
+.processSection-title {
+    max-width: 400px;
+    margin-bottom: 144px;
+    margin-left: auto;
+}
+
+.featureFlex-process {
+    margin-left: auto;
+}
+
+.greySection {
+    background: rgba(102, 102, 102, 0.05);
+}
+
+.footerFlex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 171px;
+}
+
+.contactInfo {
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #a98fff;
+    cursor: pointer;
+}
+
+.contact-type {
+    margin-bottom: 10px;
+}
+
+.contact {
+    margin-bottom: 24px;
+}
+
+
+/* Styling the Form */
+/* .appointmentForm {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-title {
+    margin-bottom: 32px;
+}
+
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 11px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666666;
+    color: #FFFFFF;
+    font-size: 19px;
+    line-height: 1;
+}
+
+form input::placeholder,
+form select {
+    color: #666666;
+    background-color: #0B0D21;
+}
+
+select option {
+    color: white;
+}
+
+select option:disabled {
+    color: #666666;
+}
+
+
+
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1;
+}
+
+.response-time {
+    margin: 21px 0;
+} */
+
+
+.appointmentForm {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-title {
+    margin-bottom: 32px;
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1;
+}
+
+.response-time {
+    margin: 21px 0;
+}
+
+/* Inputs and Selects */
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 11px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666666;
+    font-size: 19px;
+    line-height: 1;
+    background-color: #0B0D21;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: white;
+    /* Default to white text */
+}
+
+form select {
+    /* Custom arrow icon */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px;
+
+    transition: background-image 0.3s ease;
+}
+
+form select:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23a98fff' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+}
+
+/* Input placeholder */
+form input::placeholder {
+    color: #666666;
+}
+
+/* Select placeholder (disabled) */
+form select option:disabled {
+    color: #666666;
+}
+
+/* Dropdown options */
+form select option {
+    color: white;
+    background-color: #0B0D21;
+}
+
+/* Placeholder-colored select if no value selected */
+form select.placeholder {
+    color: #666666;
+}
+
+
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #a98fff;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
